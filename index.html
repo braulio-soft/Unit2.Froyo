@@ -5,34 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Froyo Order App</title>
+    <script src="index.js"></script>
 </head>
 
 <body>
     <h1>Welcome to the Froyo Order App!</h1>
     <p>Check the console to see your order summary after entering your flavors.</p>
-
-    <script>
-        function countFroyoFlavors(input) {
-            const flavorsArray = input.split(',');
-            const flavorCount = {};
-
-            flavorsArray.forEach(flavor => {
-                flavor = flavor.trim().toLowerCase();
-                if (flavorCount[flavor]) {
-                    flavorCount[flavor]++;
-                } else {
-                    flavorCount[flavor] = 1;
-                }
-            });
-
-            return flavorCount;
-        }
-
-        const userInput = prompt("Enter your froyo flavors separated by commas (e.g., vanilla,strawberry,coffee):");
-        const flavorSummary = countFroyoFlavors(userInput);
-
-        console.table(flavorSummary);
-    </script>
 </body>
 
 </html>
